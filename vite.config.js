@@ -15,4 +15,5 @@ export default defineConfig({
     },
   },
   plugins: [Inspect()],
+  base: '/goit-js-hw-09/',
 });
