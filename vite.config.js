@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        task1: resolve(__dirname, 'src/01-color-switcher.html'),
+        src: resolve(__dirname, 'src/01-color-switcher.html'),
         task2: resolve(__dirname, 'src/02-timer.html'),
         task3: resolve(__dirname, 'src/03-promises.html'),
       },
