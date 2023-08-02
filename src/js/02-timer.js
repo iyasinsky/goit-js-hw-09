@@ -44,15 +44,21 @@ class Timer {
       const time = this.convertMs(timeDiff);
 
       this.onTick(time);
+
+      if (timeDiff < 1000) {
+        this.stop();
+      }
     }, 1000);
 
     fp.input.disabled = true;
+    startBtn.disabled = true;
   }
 
-  // stop() {
-  //   clearInterval(this.intervalId);
-  //   this.isActive = false;
-  // }
+  stop() {
+    clearInterval(this.intervalId);
+    this.isActive = false;
+    fp.input.disabled = false;
+  }
 
   convertMs(ms) {
     // Number of milliseconds per unit of time
